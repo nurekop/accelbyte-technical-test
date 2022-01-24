@@ -1,0 +1,6 @@
+@mixin dots-after {
+  content: url('../image/dots.svg');
+  position: absolute;
+  right: -18px;
+  bottom: -21px;
+}

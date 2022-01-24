@@ -1,0 +1,24 @@
+@use './Dots';
+
+.user-information {
+  position: relative;
+  padding: 15px;
+  margin: 0 0 20px;
+  border: solid 2px;
+
+  &::after {
+    @include Dots.dots-after;
+  }
+}
+
+.user-albums {
+  position: relative;
+  height: 50vh;
+  overflow-y: auto;
+  border: solid 2px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

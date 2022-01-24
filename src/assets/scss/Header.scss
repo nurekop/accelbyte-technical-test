@@ -1,0 +1,65 @@
+@mixin header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  border-bottom: solid 1px #909090;
+  z-index: 30;
+
+  &-container {
+    @include header-container;
+    justify-content: space-between;
+    padding: 20px 16px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__logo {
+    @include header-container;
+    cursor: pointer;
+
+    &-icon {
+      height: 30px;
+    }
+
+    &-title {
+      font-size: 1.5em;
+      margin: 0 10px 0;
+      color: #090909;
+    }
+  }
+
+  &__menu-icon{
+    &:hover {
+      fill: red;
+      cursor: pointer;
+    }
+  }
+}
+
+.container {
+  flex-grow: 1;
+  margin: 100px auto 0;
+  padding: 0 15px;
+  position: relative;
+  width: auto;
+
+  @media screen and (min-width: 1408px) {
+    max-width: 1344px;
+  }
+
+  @media screen and (min-width: 1216px) {
+    max-width: 1152px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 960px;
+  }
+}
